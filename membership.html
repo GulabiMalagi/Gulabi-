@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Plans - BlissFit Gym</title>
+  <link rel="stylesheet" href="member.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo-container">
+      <img src="logo.png" alt="BlissFit Logo" class="logo"><span>BlissFit</span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Membership</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- Membership Cards -->
+  <div class="membership-cards-container">
+    <div class="card">
+      <h2>Basic Membership</h2>
+      <p>Price: ₹500/month</p>
+      <h5><ol>
+        <li>Only Gym Equipments</li>
+      </ol>
+    </h5>
+      <button class="join-button" onclick="openJoinForm('Basic Membership')">Join</button>
+    </div>
+    <div class="card">
+      <h2>Standard Membership</h2>
+      <p>Price: ₹1000/month</p>
+      <h5>
+        <ol>
+          <li>Gym</li>
+          <li>Cardio</li>
+        </ol>
+      </h5>
+      <button class="join-button" onclick="openJoinForm('Standard Membership')">Join</button>
+    </div>
+    <div class="card">
+      <h2>Premium Membership</h2>
+      <p>Price: ₹1500/month</p>
+      <h5>
+        <ol>
+          <li>Gym</li>
+          <li>Cardio</li>
+          <li>Yoga</li>
+        </ol>
+      </h5>
+      <button class="join-button" onclick="openJoinForm('Premium Membership')">Join</button>
+    </div>
+    <div class="card">
+      <h2>Elite Membership</h2>
+      <p>Price: ₹2000/month</p>
+      <h5>
+        <ol>
+          <li>Gym</li>
+          <li>Cardio</li>
+          <li>Yoga</li>
+          <li>Zumba</li>
+        </ol>
+      </h5>
+      <button class="join-button" onclick="openJoinForm('Elite Membership')">Join</button>
+    </div>
+    <div class="card">
+      <h2>Personal Trainer</h2>
+      <p>Price: ₹3500/month</p>
+      <h5>
+        <ol>
+          <li>Personalized Training</li>
+        </ol>
+      </h5>
+      <button class="join-button" onclick="openJoinForm('Personal Trainer')">Join</button>
+    </div>
+</div>
+
+
+  <!-- Popup Form -->
+  <div id="joinPopup" class="popup" style="display:none;">
+    <div class="popup-content">
+      <h3>Join Now</h3>
+      <p id="membership-type"></p>
+      <form id="joinForm">
+        <input type="text" id="name" placeholder="Full Name" required><br><br>
+        <input type="number" id="age" placeholder="Age" required><br><br>
+        <input type="tel" id="phone" placeholder="Phone Number" required><br><br>
+        <label for="shift">Choose Shift:</label>
+        <select id="shift" required>
+          <option value="morning">Morning</option>
+          <option value="evening">Evening</option>
+        </select><br><br>
+        <!-- Move Submit Button Inside the Form -->
+        <button class="submit" type="submit">Submit</button>
+        <button type="button" onclick="closePopup()">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Popup -->
+  <div id="successPopup" class="popup" style="display:none;">
+    <div class="popup-content">
+      <h3>Joined Successfully!</h3>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 BlissFit | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Open the Join Form Popup and Display the Membership Type
+    function openJoinForm(membershipType) {
+      document.getElementById('membership-type').innerText = `You are joining the  ${membershipType}.`;
+      document.getElementById('joinPopup').style.display = 'flex';  // Show the join form popup
+    }
+
+    // Close the Join Form Popup
+    function closePopup() {
+      document.getElementById('joinPopup').style.display = 'none';  // Hide the join form popup
+    }
+
+    // Handle form submission with the correct event listener
+    document.getElementById('joinForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Show the success popup and hide the join form
+      document.getElementById('joinPopup').style.display = 'none';  // Hide the join form
+      document.getElementById('successPopup').style.display = 'flex';  // Show success message
+
+      // Hide the success popup after 2 seconds
+      setTimeout(function() {
+        document.getElementById('successPopup').style.display = 'none';  // Hide the success message
+      }, 2000);
+
+      // Reset the form after submission
+      document.getElementById('joinForm').reset(); 
+    });
+  </script>
+</body>
+</html>

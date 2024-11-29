@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlissFit Gym</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo-container">
+      <img src="logo.png" alt="BlissFit Logo" class="logo"><span>BlissFit</span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a id="contactNavLink" href="#">Contact</a></li> <!-- Updated the ID -->
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="overlay">
+      <h1>BlissFit</h1>
+      <p class="tagline">Find Your Balance, Feel Your Bliss</p>
+      <p id="quote">"Your potential is limitless." - Unknown</p>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="cards-container">
+    <div class="card" id="membershipCard">
+      <h3>Membership</h3>
+      <p>Join our gym for a healthier you!</p>
+    </div>
+    <div class="card" id="timingCard">
+      <h3>Timing</h3>
+      <p>Check our gym hours here.</p>
+    </div>
+    <div class="card" id="contactCard"> <!-- Retain ID for this card -->
+      <h3>Contact</h3>
+      <p>Get in touch with us.</p>
+    </div>
+  </div>
+
+  <div class="quote-after-cards">
+    <p>"JOIN US AND ACHIEVE YOUR BEST SELF."</p>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 BlissFit | All Rights Reserved</p>
+  </footer>
+  <script>
+    document.getElementById('membershipCard').addEventListener('click', function() {
+        window.location.href = 'membership.html'; // Redirect to the membership page
+    });
+  </script>
+</body>
+</html>
