@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +12,8 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation Styling */
-/* Navigation Styling */
 nav {
-    background-color: rgba(51, 51, 51, 0.8); /* Translucent dark background (opacity 0.8) */
+    background-color: rgba(51, 51, 51, 0.8); 
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -25,30 +23,30 @@ nav {
     align-items: center;
 }
 
-/* Logo container */
+
 nav .logo-container {
     display: flex;
-    align-items: center; /* Vertically align logo and text */
+    align-items: center; 
     padding-left: 20px;
 }
 
 nav .logo {
-    width: 50px; /* Adjust the width of the logo as needed */
+    width: 50px; 
     height:50px;
 }
 nav .logo-container span {
-    font-size: 1.8em; /* Adjust font size of the text */
+    font-size: 1.8em; 
     font-weight: bold;
     color: white;
     margin-left: 2px;
 }
 
-/* Navbar links */
+
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: flex-end; /* Shift nav items to the right */
-    margin-right: 20px; /* Adjust space from the right */
+    justify-content: flex-end; 
+    margin-right: 20px; 
 }
 
 nav ul li {
@@ -64,28 +62,27 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff7f50; /* Hover color */
+    color: #ff7f50; 
 }
 
 
-/* Hero Section Styling */
 .hero {
     position: relative;
     height: 100vh;
-    background-image: url('gym.jpg'); /* Replace with your image path */
+    background-image: url('gym.jpg');
     background-size: cover;
     background-position: center;
-    /*filter: brightness(); /* Darken the background image */
+    /*filter: brightness(); 
 }
 
-/* Overlay on Hero */
+
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    background: rgba(0, 0, 0, 0.6); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +91,7 @@ nav ul li a:hover {
     padding: 0 20px;
 }
 
-/* Hero Heading Styling */
+
 h1 {
     font-size: 4em;
     color: #fff;
@@ -105,7 +102,7 @@ h1 {
 
 .tagline {
     font-size: 1.8em;
-    color: #ff7f50; /* Red-orange color for emphasis */
+    color: #ff7f50; 
     font-style: italic;
     margin-bottom: 20px;
 }
@@ -113,13 +110,13 @@ h1 {
 #quote {
     font-size: 1.5em;
     font-style: italic;
-    color: #f0e68c; /* Light yellow for the quote */
+    color: #f0e68c; 
     max-width: 600px;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Cards Section */
+
 .cards-container {
     display: flex;
     justify-content: center;
@@ -129,7 +126,7 @@ h1 {
 }
 
 .card {
-    background-color: rgba(61, 60, 60, 0.5); /* Slight transparency */
+    background-color: rgba(61, 60, 60, 0.5); 
     color: #fff;
     width: 250px;
     height: 250px;
@@ -142,18 +139,17 @@ h1 {
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(10px); /* Increased blur effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .card:hover {
     transform: scale(1.05);
     cursor: pointer;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced hover shadow */
-}
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); 
 
 .card h3 {
-    color: #e63946; /* Bright red for headings */
+    color: #e63946; 
     font-size: 1.5em;
     margin-bottom: 10px;
 }
@@ -169,7 +165,7 @@ h1 {
     margin-top: 20px;
     font-size: 1.5em;
     font-weight: bold;
-    color: #ebbf48; /* Red color for emphasis */
+    color: #ebbf48; 
     padding: 20px;
 }
 /* Popup Styling */
@@ -179,7 +175,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.7); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,7 +208,7 @@ h1 {
 }
 
 .popup button {
-    background-color: #e63946; /* Red button */
+    background-color: #e63946; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -241,7 +237,7 @@ footer p {
     font-size: 1em;
 }
 
-/* Footer Links */
+
 footer a {
     color: #ff7f50;
     text-decoration: none;
