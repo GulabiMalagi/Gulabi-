@@ -8,7 +8,7 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navigation -->
+ 
   <nav>
     <div class="logo-container">
       <img src="logo.png" alt="BlissFit Logo" class="logo"><span>BlissFit</span>
@@ -20,7 +20,7 @@
     </ul>
   </nav>
 
-  <!-- Membership Cards -->
+ 
   <div class="membership-cards-container">
     <div class="card">
       <h2>Basic Membership</h2>
@@ -80,7 +80,7 @@
 </div>
 
 
-  <!-- Popup Form -->
+  
   <div id="joinPopup" class="popup" style="display:none;">
     <div class="popup-content">
       <h3>Join Now</h3>
@@ -94,51 +94,51 @@
           <option value="morning">Morning</option>
           <option value="evening">Evening</option>
         </select><br><br>
-        <!-- Move Submit Button Inside the Form -->
+       
         <button class="submit" type="submit">Submit</button>
         <button type="button" onclick="closePopup()">Close</button>
       </form>
     </div>
   </div>
 
-  <!-- Success Popup -->
+
   <div id="successPopup" class="popup" style="display:none;">
     <div class="popup-content">
       <h3>Joined Successfully!</h3>
     </div>
   </div>
 
-  <!-- Footer Section -->
+  
   <footer>
     <p>&copy; 2024 BlissFit | All Rights Reserved</p>
   </footer>
 
   <script>
-    // Open the Join Form Popup and Display the Membership Type
+  
     function openJoinForm(membershipType) {
       document.getElementById('membership-type').innerText = `You are joining the  ${membershipType}.`;
       document.getElementById('joinPopup').style.display = 'flex';  // Show the join form popup
     }
 
-    // Close the Join Form Popup
+
     function closePopup() {
       document.getElementById('joinPopup').style.display = 'none';  // Hide the join form popup
     }
 
-    // Handle form submission with the correct event listener
+
     document.getElementById('joinForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent default form submission
 
-      // Show the success popup and hide the join form
+ 
       document.getElementById('joinPopup').style.display = 'none';  // Hide the join form
       document.getElementById('successPopup').style.display = 'flex';  // Show success message
 
-      // Hide the success popup after 2 seconds
+     
       setTimeout(function() {
         document.getElementById('successPopup').style.display = 'none';  // Hide the success message
       }, 2000);
 
-      // Reset the form after submission
+      
       document.getElementById('joinForm').reset(); 
     });
   </script>
